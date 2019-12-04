@@ -15,7 +15,10 @@
 		577E5BFF21BA8C3B0083EB97 /* userinfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 577E5BFE21BA8C3B0083EB97 /* userinfo.json */; };
 		577E5C0121BA8C5C0083EB97 /* applstockinfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 577E5C0021BA8C5C0083EB97 /* applstockinfo.json */; };
 		C6054BCE2396E7B600480569 /* UserDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6054BCD2396E7B600480569 /* UserDetailVC.swift */; };
+		C608019B2398153A003137F3 /* AppleStock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C608019A2398153A003137F3 /* AppleStock.swift */; };
 		C610C5C123975E2F00D0A8B2 /* userPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = C610C5C023975E2F00D0A8B2 /* userPicture.swift */; };
+		C610C5C32397677800D0A8B2 /* StocksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C610C5C22397677800D0A8B2 /* StocksViewController.swift */; };
+		C610C5C52397678B00D0A8B2 /* StocksDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C610C5C42397678B00D0A8B2 /* StocksDetailVC.swift */; };
 		C6386A4423970D73006E3B2F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6386A4323970D73006E3B2F /* User.swift */; };
 		C6386A4C23971738006E3B2F /* PeopleAndAppleStockPricesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6386A4B23971738006E3B2F /* PeopleAndAppleStockPricesTests.swift */; };
 /* End PBXBuildFile section */
@@ -41,7 +44,10 @@
 		577E5BFE21BA8C3B0083EB97 /* userinfo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = userinfo.json; sourceTree = "<group>"; };
 		577E5C0021BA8C5C0083EB97 /* applstockinfo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = applstockinfo.json; sourceTree = "<group>"; };
 		C6054BCD2396E7B600480569 /* UserDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailVC.swift; sourceTree = "<group>"; };
+		C608019A2398153A003137F3 /* AppleStock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleStock.swift; sourceTree = "<group>"; };
 		C610C5C023975E2F00D0A8B2 /* userPicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userPicture.swift; sourceTree = "<group>"; };
+		C610C5C22397677800D0A8B2 /* StocksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksViewController.swift; sourceTree = "<group>"; };
+		C610C5C42397678B00D0A8B2 /* StocksDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksDetailVC.swift; sourceTree = "<group>"; };
 		C6386A4323970D73006E3B2F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C6386A4923971738006E3B2F /* PeopleAndAppleStockPricesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeopleAndAppleStockPricesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6386A4B23971738006E3B2F /* PeopleAndAppleStockPricesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleAndAppleStockPricesTests.swift; sourceTree = "<group>"; };
@@ -87,11 +93,9 @@
 		577E5BEA21BA8BA10083EB97 /* PeopleAndAppleStockPrices */ = {
 			isa = PBXGroup;
 			children = (
-				C6386A4323970D73006E3B2F /* User.swift */,
-				C610C5C023975E2F00D0A8B2 /* userPicture.swift */,
-				577E5BED21BA8BA10083EB97 /* UserVC.swift */,
-				C6054BCD2396E7B600480569 /* UserDetailVC.swift */,
+				C608019C23981BDB003137F3 /* Users */,
 				577E5BEF21BA8BA10083EB97 /* Main.storyboard */,
+				C608019D23981BF5003137F3 /* AppleStock */,
 				577E5BFD21BA8BE20083EB97 /* Supporting Files */,
 				577E5BF721BA8BA20083EB97 /* Info.plist */,
 			);
@@ -116,6 +120,27 @@
 				577E5C0021BA8C5C0083EB97 /* applstockinfo.json */,
 			);
 			path = json;
+			sourceTree = "<group>";
+		};
+		C608019C23981BDB003137F3 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				C6386A4323970D73006E3B2F /* User.swift */,
+				C610C5C023975E2F00D0A8B2 /* userPicture.swift */,
+				577E5BED21BA8BA10083EB97 /* UserVC.swift */,
+				C6054BCD2396E7B600480569 /* UserDetailVC.swift */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		C608019D23981BF5003137F3 /* AppleStock */ = {
+			isa = PBXGroup;
+			children = (
+				C608019A2398153A003137F3 /* AppleStock.swift */,
+				C610C5C22397677800D0A8B2 /* StocksViewController.swift */,
+				C610C5C42397678B00D0A8B2 /* StocksDetailVC.swift */,
+			);
+			path = AppleStock;
 			sourceTree = "<group>";
 		};
 		C6386A4A23971738006E3B2F /* PeopleAndAppleStockPricesTests */ = {
@@ -231,10 +256,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6386A4423970D73006E3B2F /* User.swift in Sources */,
+				C608019B2398153A003137F3 /* AppleStock.swift in Sources */,
 				577E5BEE21BA8BA10083EB97 /* UserVC.swift in Sources */,
 				C6054BCE2396E7B600480569 /* UserDetailVC.swift in Sources */,
+				C610C5C32397677800D0A8B2 /* StocksViewController.swift in Sources */,
 				C610C5C123975E2F00D0A8B2 /* userPicture.swift in Sources */,
 				577E5BEC21BA8BA10083EB97 /* AppDelegate.swift in Sources */,
+				C610C5C52397678B00D0A8B2 /* StocksDetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
