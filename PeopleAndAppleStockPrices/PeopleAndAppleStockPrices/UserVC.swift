@@ -28,6 +28,12 @@ class UserVC: UIViewController {
         user = User.getUser()
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let detailVC = segue.destination as? UserDetailVC, let indexPath = tableview.indexPathForSelectedRow else {
+            fatalError("issue with segue")
+        }
+        detailVC.userInfo = user[indexPath.row]
+    }
 
 }
 

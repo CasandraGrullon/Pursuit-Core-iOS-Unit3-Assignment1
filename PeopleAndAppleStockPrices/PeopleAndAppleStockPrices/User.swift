@@ -16,6 +16,7 @@ struct UserInfo: Codable {
     let name : Name
     let email : String
     let location: Location
+    let picture: Picture
 }
 
 struct Name: Codable {
@@ -25,6 +26,10 @@ struct Name: Codable {
 
 struct Location: Codable {
     let city: String
+}
+
+struct Picture: Codable {
+    let medium: String
 }
 
 extension User {
