@@ -23,11 +23,16 @@ class UserVC: UIViewController {
     super.viewDidLoad()
         loadData()
         tableview.dataSource = self
+        searchBar.delegate = self
   }
     func loadData(){
         user = User.getUser()
     }
 
+    func filterSearch(for searchText: String){
+        user = User.getUser().filter { $0.name.first.lowercased().contains(searchText.lowercased()) }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let detailVC = segue.destination as? UserDetailVC, let indexPath = tableview.indexPathForSelectedRow else {
             fatalError("issue with segue")
@@ -50,5 +55,19 @@ extension UserVC: UITableViewDataSource {
         
         
         return cell
+    }
+}
+
+extension UserVC: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        guard !searchText.isEmpty else {
+            loadData()
+            return
+        }
+        filterSearch(for: searchText)
     }
 }
